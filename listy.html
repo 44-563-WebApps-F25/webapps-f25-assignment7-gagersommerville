@@ -50,6 +50,27 @@
 		element.innerHTML = inputValue;
         element.className = "listy";
 
+        let listyItems = document.getElementsByClassName("listy");
+
+        if (listyItems.length > 9) {
+            let removed = false;
+        
+
+        for (const item of listyItems) {
+            if (item.innerHTML === element.innerHTML) {
+                console.log("Removed duplicate", item.innerHTML);
+                item.remove();
+                removed = true;
+                break;
+            }
+        }
+
+        if (!removed && listyItems.length > 0) {
+            console.log("Removed first item for correct size", listyItems[0].innerHTML);
+            listyItems[0].remove();
+        }
+    }
+
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
