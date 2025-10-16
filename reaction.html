@@ -34,13 +34,42 @@
   let myTime = undefined;
 
 
-  function recordReact() {
-    myTime = Date.now();
-    console.log("React button pressed at:", myTime);
+    function recordReact() {
+        myTime = Date.now();
+        console.log("React button pressed at:", myTime);
 
   }
 
   document.getElementById("reactBtn").onclick = recordReact;
+
+    function startTime() {
+        const countdownEl = document.getElementById("countdown");
+        const targetEl = document.getElementById("target");
+
+        myTime = undefined;
+        targetEl.innerHTML = "Your time";
+        countdownEl.innerHTML = "Count";
+
+
+        for (let i = 0; i <= 3; i++){
+            setTimeout(() => {
+                countdownEl.innerHTML = i;
+            }, (3 -i) * 1000);
+        }
+
+    setTimeout(() => {
+        if (myTime === undefined) {
+            targetEl.innerHTML = "Too Slow";
+        } else {
+            const buttonTime = Date.now();
+            const diff = buttonTime - myTime;
+            targetEl.innerHTML = `Time was ${diff} ms`;
+            console.log("Zero moment:", buttonTime, "Clicked at:", myTime, "Diff:", diff);
+        }
+        }, 3000);
+  }
+
+    document.getElementById("startBtn").onclick = startTime;
 
   </script>
 
