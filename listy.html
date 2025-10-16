@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+    
+<head>
+    <title>Buidling a List</title>
+<style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+
+    .listy {
+        color: black;
+    }
+</style>
+</head>
+
+
+
+<body>
+    <h1>Gage Sommerville builds a list</h1>
+    <p>Press the button to create an new element of type div and then add it to the container.</p>
+    <input type = "text" id = "userInput" placeholder="Enter item text here">
+    <button onclick="makeNewDiv()">Add one</button>
+		<div class="flex-container" id="target">  
+		</div>
+	
+	
+</body>
+<script>
+	function makeNewDiv(){
+		/* make the div and its text */
+		let element = document.createElement("div");
+
+        let inputValue = document.getElementById("userInput").value;
+
+		element.innerHTML = inputValue;
+        element.className = "listy";
+
+		/* add it to the container */
+		let container = document.getElementById('target')
+		container.appendChild(element)
+
+        document.getElementById("userInput").value = "";
+		
+	}
+</script>
+</html>	
