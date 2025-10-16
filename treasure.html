@@ -15,8 +15,8 @@
     <style>
         
         .row-container { display: flex; justify-content:center; }
-        .box {margin: 5px; }
-        .box img { width: 80px; height: 80px; }
+        .cell {margin: 5px; }
+        .cell img { width: 80px; height: 80px; }
 
     </style>
 
@@ -24,63 +24,94 @@
 
 <body class = "bg-light text-center py-4">
 
-    <div class="container bg-white p-3 rounded shadow">
-        <h1 class = "mb-4">Gage Sommerville Treasure Hunt</h1>
-        <p>Click on the locations to find silver and gold, watch out for the rattlesnake</p>
-        <p id="locations" class="fw-bold">Number of locations checked is zero.</p>
-        <p>Click for help.</p>
-        <p id="help" class="text-muted">Help report</p>
+  <div class="container bg-white p-3 rounded shadow">
+        <h1 class = "mb-4">Find the Treasure Gage Sommerville</h1>
+        <p>Click on the squares to find the treasure.</p>
+        <p id="clicks" class="fw-bold mb-1">Number of clicks is zero.</p>
+        <p id="distance" class="text-muted">Distance is unknown.</p>
+
+    <div class="row-container">
+      <div class="cell"><img id = "img0" src="images/cactus.png" alt="start" onclick="makeGuess(0)"></div>
+      <div class="cell"><img id = "img1" src="images/cactus.png" alt="start" onclick="makeGuess(1)"></div>
+      <div class="cell"><img id = "img2" src="images/cactus.png" alt="start" onclick="makeGuess(2)"></div>
+      <div class="cell"><img id = "img3" src="images/cactus.png" alt="start" onclick="makeGuess(3)"></div>
+      <div class="cell"><img id = "img4" src="images/cactus.png" alt="start" onclick="makeGuess(4)"></div>
     </div>
 
     <div class="row-container">
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-      <div class="box"><img src="images/cactus.png" alt="cactus"></div>
+      <div class="cell"><img id = "img5" src="images/cactus.png" alt="start" onclick="makeGuess(5)"></div>
+      <div class="cell"><img id = "img6" src="images/cactus.png" alt="start" onclick="makeGuess(6)"></div>
+      <div class="cell"><img id = "img7" src="images/cactus.png" alt="start" onclick="makeGuess(7)"></div>
+      <div class="cell"><img id = "img8" src="images/cactus.png" alt="start" onclick="makeGuess(8)"></div>
+      <div class="cell"><img id = "img9" src="images/cactus.png" alt="start" onclick="makeGuess(9)"></div>
     </div>
 
     <div class="row-container">
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
+      <div class="cell"><img id = "img10" src="images/cactus.png" alt="start" onclick="makeGuess(10)"></div>
+      <div class="cell"><img id = "img11" src="images/cactus.png" alt="start" onclick="makeGuess(11)"></div>
+      <div class="cell"><img id = "img12" src="images/cactus.png" alt="start" onclick="makeGuess(12)"></div>
+      <div class="cell"><img id = "img13" src="images/cactus.png" alt="start" onclick="makeGuess(13)"></div>
+      <div class="cell"><img id = "img14" src="images/cactus.png" alt="start" onclick="makeGuess(14)"></div>
     </div>
 
     <div class="row-container">
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
+      <div class="cell"><img id = "img15" src="images/cactus.png" alt="start" onclick="makeGuess(15)"></div>
+      <div class="cell"><img id = "img16" src="images/cactus.png" alt="start" onclick="makeGuess(16)"></div>
+      <div class="cell"><img id = "img17" src="images/cactus.png" alt="start" onclick="makeGuess(17)"></div>
+      <div class="cell"><img id = "img18" src="images/cactus.png" alt="start" onclick="makeGuess(18)"></div>
+      <div class="cell"><img id = "img19" src="images/cactus.png" alt="start" onclick="makeGuess(19)"></div>
     </div>
 
     <div class="row-container">
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
+      <div class="cell"><img id = "img20" src="images/cactus.png" alt="start" onclick="makeGuess(20)"></div>
+      <div class="cell"><img id = "img21" src="images/cactus.png" alt="start" onclick="makeGuess(21)"></div>
+      <div class="cell"><img id = "img22" src="images/cactus.png" alt="start" onclick="makeGuess(22)"></div>
+      <div class="cell"><img id = "img23" src="images/cactus.png" alt="start" onclick="makeGuess(23)"></div>
+      <div class="cell"><img id = "img24" src="images/cactus.png" alt="start" onclick="makeGuess(24)"></div>
     </div>
+  </div>
 
-    <div class="row-container">
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-        <div class="box"><img src="images/cactus.png" alt="cactus"></div>
-    </div>
+  <script>
+    const ids = [];
+    for (let i = 0; i < 25; i++) {
+      ids.push("img" + i);
+    }
+
+    let clickCount = 0;
+
+    const treasureLocation = 18;
+
+    const clicksEl = document.getElementById("clicks");
+const distanceEl = document.getElementById("distance");
+
+    function makeGuess(position) {
+      const id = ids[position];
+
+      const img = document.getElementById(id);
+      if (position === treasureLocation) {
+        img.src = "images/treasure.png";
+      } else {
+        img.src = "images/not.png"
+      }
+
+      clickCount += 1;
+
+      clicksEl.textContent = `Number of clicks is ${clickCount}.`;
+
+      distanceEl.textContent = `Distance: ${distance(position, treasureLocation)}`;
+    
+    }
+
+    function distance(pos1, pos2) {
+      const cols = 5;
+      const r1 = Math.floor(pos1 / cols);
+      const c1 = pos1 % cols;
+      const r2 = Math.floor(pos2 / cols);
+      const c2 = pos2 % cols;
+        return Math.abs(r1-r2) + Math.abs(c1-c2);
+    }
+
+  </script>
 
   
 
